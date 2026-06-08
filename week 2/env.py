@@ -90,7 +90,7 @@ class FrameStacker:
         Returns:
             np.ndarray of shape (n_frames, frame_size, frame_size)
         """
-        np.concatenate(
+        self.frames = np.concatenate(
           [self.frames[1:], frame[np.newaxis, ...]],
           axis=0)
         return self.frames
